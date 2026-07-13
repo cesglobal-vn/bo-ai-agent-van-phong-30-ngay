@@ -63,7 +63,8 @@ Cùng một tư duy "giao việc có cấu trúc" (đầu vào - đầu ra - cá
 
 ## Trạng thái soạn bài
 
-- [x] Buổi 01 - Viết thư điện tử (kịch bản hands-on + file agent cho học viên).
-- [ ] Buổi 02-20 - đang soạn theo khuôn.
+- [x] Buổi 01 - Viết thư điện tử (Instructions) - kịch bản + file agent.
+- [x] Buổi 02 - Tóm tắt tài liệu (Context) - kịch bản + file agent.
+- [ ] Buổi 03-20 - đang soạn theo khuôn.
 
 *© CES Global - Bộ tài liệu chương trình "30 Ngày Làm Chủ AI Agent".*
