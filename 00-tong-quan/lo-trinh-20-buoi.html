@@ -1,0 +1,352 @@
+<!doctype html>
+<html lang="vi">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Lộ trình 20 buổi - 30 ngày làm chủ AI Agent | CES Global</title>
+<style>
+  :root{
+    --navy:#14284b; --navy2:#1f3a6b;
+    --m1:#0e8f86; --m1bg:#e6f5f3;
+    --m2:#b9821a; --m2bg:#fbf1dc;
+    --m3:#c0392b; --m3bg:#fbe9e7;
+    --m3a:#cf5a3a; --m3b:#b3231a;
+    --ink:#1f2430; --muted:#5b6472;
+    --bg:#eef1f6; --card:#ffffff; --line:#e2e7ef;
+    --radius:14px;
+  }
+  *{box-sizing:border-box}
+  html{-webkit-text-size-adjust:100%}
+  body{margin:0; background:var(--bg); color:var(--ink); font-family:"Segoe UI",system-ui,-apple-system,Roboto,Arial,sans-serif; line-height:1.55}
+  .wrap{max-width:1120px; margin:0 auto; padding:0 20px 64px}
+
+  header.hero{background:linear-gradient(135deg,var(--navy) 0%,var(--navy2) 100%); color:#fff; padding:38px 0 30px; margin-bottom:28px}
+  header.hero .wrap{padding-bottom:0}
+  .kicker{letter-spacing:.14em; text-transform:uppercase; font-size:12px; opacity:.8; font-weight:700}
+  header.hero h1{margin:8px 0 6px; font-size:30px; line-height:1.2}
+  header.hero p{margin:0; opacity:.9; max-width:780px}
+  .hero-meta{display:flex; flex-wrap:wrap; gap:10px 22px; margin-top:16px; font-size:13px; opacity:.92}
+  .hero-meta b{color:#ffd873}
+  .legend{display:flex; flex-wrap:wrap; gap:14px; margin:14px 0 0; font-size:12.5px; opacity:.95}
+  .legend span{display:inline-flex; align-items:center; gap:6px}
+  .dot{width:12px; height:12px; border-radius:3px; display:inline-block}
+
+  h2.sec{font-size:20px; margin:38px 0 14px; color:var(--navy); display:flex; align-items:center; gap:10px}
+  h2.sec::before{content:""; width:6px; height:22px; border-radius:3px; background:var(--navy)}
+  .lead{color:var(--muted); margin:0 0 18px; max-width:840px}
+
+  .phases{display:grid; grid-template-columns:repeat(3,1fr); gap:16px}
+  .phase{background:var(--card); border:1px solid var(--line); border-top:5px solid var(--c); border-radius:var(--radius); padding:18px}
+  .phase .lvl{font-weight:800; font-size:14px; color:var(--c)}
+  .phase h3{margin:4px 0 6px; font-size:17px}
+  .phase .rng{display:inline-block; font-size:12px; font-weight:700; color:#fff; background:var(--c); padding:3px 10px; border-radius:999px; margin-bottom:10px}
+  .phase p{margin:0; font-size:13.5px; color:var(--muted)}
+  .phase.p1{--c:var(--m1)} .phase.p2{--c:var(--m2)} .phase.p3{--c:var(--m3)}
+  .arrow-note{text-align:center; color:var(--muted); font-size:13px; margin:12px 0 0}
+
+  .week{margin-top:26px; background:var(--card); border:1px solid var(--line); border-radius:var(--radius); overflow:hidden}
+  .week-head{display:flex; align-items:center; justify-content:space-between; gap:14px; padding:14px 18px; color:#fff; background:var(--c)}
+  .week.t1{--c:var(--m1)} .week.t2{--c:var(--m2)} .week.t3{--c:var(--m3a)} .week.t4{--c:var(--m3b)}
+  .week-head .wt{font-weight:800; font-size:16px}
+  .week-head .wsub{font-size:12.5px; opacity:.92}
+  .badge{font-size:11.5px; font-weight:800; background:rgba(255,255,255,.22); border:1px solid rgba(255,255,255,.4); padding:4px 10px; border-radius:999px; white-space:nowrap}
+
+  .cards{display:grid; grid-template-columns:repeat(5,1fr); gap:0}
+  .card{border-right:1px solid var(--line); border-top:1px solid var(--line); padding:14px 14px 16px; display:flex; flex-direction:column; min-height:212px}
+  .card:nth-child(5n){border-right:none}
+  .card .top{display:flex; align-items:center; justify-content:space-between; margin-bottom:8px}
+  .num{width:30px; height:30px; border-radius:8px; background:var(--navy); color:#fff; font-weight:800; font-size:14px; display:flex; align-items:center; justify-content:center}
+  .feat{font-size:10px; font-weight:800; letter-spacing:.03em; text-transform:uppercase; color:var(--muted); margin:0 0 3px}
+  .chip{font-size:10.5px; font-weight:800; padding:3px 8px; border-radius:999px}
+  .chip.m1{background:var(--m1bg); color:var(--m1)} .chip.m2{background:var(--m2bg); color:var(--m2)} .chip.m3{background:var(--m3bg); color:var(--m3)}
+  .card h4{margin:2px 0 8px; font-size:14.5px; line-height:1.3}
+  .card .nd{font-size:12.5px; color:var(--muted); margin:0 0 auto}
+  .card .sp{margin-top:10px; font-size:12px; color:var(--ink); background:#f3f6fa; border:1px solid var(--line); border-radius:8px; padding:7px 9px}
+  .card .sp b{color:var(--navy)}
+
+  .timeline{display:grid; grid-template-columns:repeat(6,1fr); gap:12px}
+  .step{background:var(--card); border:1px solid var(--line); border-radius:12px; padding:14px 12px; border-top:4px solid var(--navy)}
+  .step .tm{font-weight:800; color:var(--navy); font-size:13px}
+  .step .nm{font-weight:700; font-size:13.5px; margin:4px 0}
+  .step p{margin:0; font-size:12px; color:var(--muted)}
+
+  .note{margin-top:18px; background:var(--m2bg); border:1px solid #e6d29a; border-left:5px solid var(--m2); border-radius:12px; padding:16px 18px}
+  .note h3{margin:0 0 6px; color:#8a6210; font-size:15px}
+  .note p{margin:0 0 8px; font-size:13.5px; color:#5c4a1f}
+  .note ul{margin:6px 0 0; padding-left:20px; font-size:13.5px; color:#5c4a1f}
+  .note li{margin:4px 0}
+
+  footer{margin-top:36px; text-align:center; color:var(--muted); font-size:12.5px}
+
+  @media (max-width:860px){
+    .phases{grid-template-columns:1fr}
+    .cards{grid-template-columns:1fr 1fr}
+    .card:nth-child(5n){border-right:1px solid var(--line)} .card:nth-child(2n){border-right:none}
+    .timeline{grid-template-columns:1fr 1fr}
+  }
+  @media (max-width:520px){
+    .cards{grid-template-columns:1fr} .card{border-right:none!important}
+    .timeline{grid-template-columns:1fr} header.hero h1{font-size:24px}
+  }
+  @media print{ body{background:#fff} .week,.phase,.step,.card{break-inside:avoid} header.hero{background:var(--navy)!important;-webkit-print-color-adjust:exact;print-color-adjust:exact} }
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="kicker">CES Global - Creative . Effective . Sustainable</div>
+    <h1>Lộ trình 20 buổi - 30 ngày làm chủ AI Agent</h1>
+    <p>Bản đề xuất (v2). Phân bổ 4 tuần x 5 buổi, đi lên 3 mức: Trợ lý Project -> Trợ lý tự bật (Skill) -> Đội trợ lý (Agent team). Mức 1 gọn trong Tuần 1 nhưng học đủ 4 tính năng của Project; Mức 3 tách 2 tuần: xây từng subagent rồi ghép thành đội phối hợp.</p>
+    <div class="hero-meta">
+      <span>Nhịp: <b>Thứ 2 - Thứ 6</b>, mỗi buổi <b>45 phút</b></span>
+      <span>Công cụ: <b>Claude</b> (Tuần 1) rồi <b>Claude Code</b> (Tuần 2-4)</span>
+      <span>Sản phẩm: <b>đội AI Agent</b> + Workspace cá nhân</span>
+    </div>
+    <div class="legend">
+      <span><i class="dot" style="background:var(--m1)"></i> Mức 1 - Trợ lý Project</span>
+      <span><i class="dot" style="background:var(--m2)"></i> Mức 2 - Trợ lý tự bật (Skill)</span>
+      <span><i class="dot" style="background:var(--m3a)"></i> Mức 3a - Xây subagent</span>
+      <span><i class="dot" style="background:var(--m3b)"></i> Mức 3b - Ghép đội / Workspace</span>
+    </div>
+  </div>
+</header>
+
+<div class="wrap">
+
+  <h2 class="sec">Ba mức nâng cấp dần</h2>
+  <p class="lead">Cùng một tư duy "giao việc có cấu trúc" (đầu vào - đầu ra - cách kiểm tra), chỉ khác công cụ. Học Mức 1 để ai cũng theo được, rồi nâng dần tới "agent" đúng nghĩa.</p>
+  <div class="phases">
+    <div class="phase p1">
+      <div class="lvl">MỨC 1</div>
+      <h3>Trợ lý Project</h3>
+      <span class="rng">Tuần 1 . Buổi 1-5</span>
+      <p>Trên claude.ai, KHÔNG cài đặt. Học đủ 4 tính năng của Project: Instructions, Context (nạp tài liệu), Memory (nhớ bối cảnh), Scheduled (tự chạy định kỳ). Chạm "tự động hóa" ngay ở Mức 1.</p>
+    </div>
+    <div class="phase p2">
+      <div class="lvl">MỨC 2</div>
+      <h3>Trợ lý tự bật (Skill)</h3>
+      <span class="rng">Tuần 2 . Buổi 6-10</span>
+      <p>Lên Claude Code: biến trợ lý thành Skill tự kích hoạt theo từ khóa, xử lý được cả file/dữ liệu. Có "lối thoát" Project cho ai chưa muốn cài.</p>
+    </div>
+    <div class="phase p3">
+      <div class="lvl">MỨC 3</div>
+      <h3>Đội trợ lý (Agent team)</h3>
+      <span class="rng">Tuần 3-4 . Buổi 11-20</span>
+      <p>Tuần 3 xây từng subagent (mỗi con 1 vai). Tuần 4 ghép thành đội phối hợp chạy trọn quy trình, đỉnh điểm là "AI Agent Workspace cá nhân" (như demo-agent-team).</p>
+    </div>
+  </div>
+  <p class="arrow-note">Mức 1 (nền tảng, không cài đặt) -&gt; Mức 2 (tự động hơn) -&gt; Mức 3 (cả đội phối hợp)</p>
+
+  <h2 class="sec">Chi tiết 20 buổi</h2>
+
+  <!-- TUAN 1 -->
+  <section class="week t1">
+    <div class="week-head">
+      <div><div class="wt">TUẦN 1 - Làm chủ Claude Project</div><div class="wsub">5 buổi học đủ 4 tính năng: Instructions -> Context -> Memory -> Scheduled -> ghép lại</div></div>
+      <span class="badge">MỨC 1 - PROJECT</span>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="top"><span class="num">1</span><span class="chip m1">Mức 1</span></div>
+        <p class="feat">Tính năng: Instructions</p>
+        <h4>Viết thư điện tử</h4>
+        <p class="nd">Buổi bộ đệm: làm quen Project, viết Instructions (bộ não), công thức đầu vào - đầu ra - cách kiểm tra.</p>
+        <div class="sp"><b>Sản phẩm:</b> Project "Trợ lý Email" + 1 email</div>
+      </div>
+      <div class="card">
+        <div class="top"><span class="num">2</span><span class="chip m1">Mức 1</span></div>
+        <p class="feat">Tính năng: Context</p>
+        <h4>Tóm tắt tài liệu</h4>
+        <p class="nd">Nạp PDF/tài liệu công ty vào Context của Project; agent tóm tắt và trả lời dựa trên đúng tài liệu đó.</p>
+        <div class="sp"><b>Sản phẩm:</b> Project "Tóm tắt" + kho tài liệu tham chiếu</div>
+      </div>
+      <div class="card">
+        <div class="top"><span class="num">3</span><span class="chip m1">Mức 1</span></div>
+        <p class="feat">Tính năng: Memory</p>
+        <h4>Ghi chú họp</h4>
+        <p class="nd">Bật Memory: Project nhớ bối cảnh (vai trò, dự án, phong cách) qua nhiều phiên, biên bản luôn nhất quán.</p>
+        <div class="sp"><b>Sản phẩm:</b> Project "Biên bản họp" nhớ bối cảnh</div>
+      </div>
+      <div class="card">
+        <div class="top"><span class="num">4</span><span class="chip m1">Mức 1</span></div>
+        <p class="feat">Tính năng: Scheduled</p>
+        <h4>Lập kế hoạch</h4>
+        <p class="nd">Đặt tác vụ định kỳ (Scheduled): mỗi sáng tự lên kế hoạch/nhắc việc. Lần đầu chạm "tự động hóa".</p>
+        <div class="sp"><b>Sản phẩm:</b> Project "Kế hoạch" tự chạy định kỳ</div>
+      </div>
+      <div class="card">
+        <div class="top"><span class="num">5</span><span class="chip m1">Mức 1</span></div>
+        <p class="feat">Ghép 4 tính năng</p>
+        <h4>Viết báo cáo</h4>
+        <p class="nd">Gộp Instructions + Context (số liệu) + Memory + Scheduled thành 1 trợ lý báo cáo hoàn chỉnh. Ôn Tuần 1.</p>
+        <div class="sp"><b>Sản phẩm:</b> 1 trợ lý Project "full" . Mốc: làm chủ Project</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TUAN 2 -->
+  <section class="week t2">
+    <div class="week-head">
+      <div><div class="wt">TUẦN 2 - Trợ lý tự bật (Skill)</div><div class="wsub">Nâng lên Claude Code: trợ lý tự kích hoạt theo từ khóa, xử lý được cả file</div></div>
+      <span class="badge">MỨC 2 - SKILL</span>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="top"><span class="num">6</span><span class="chip m2">Mức 2</span></div>
+        <p class="feat">Onboarding Claude Code</p>
+        <h4>Làm sạch dữ liệu</h4>
+        <p class="nd">Buổi nâng cấp: dành thêm giờ cài Claude Code + Skill đầu tiên tự bật. Làm sạch bảng Excel/CSV (chạy được cả code).</p>
+        <div class="sp"><b>Sản phẩm:</b> Skill "Làm sạch dữ liệu"</div>
+      </div>
+      <div class="card">
+        <div class="top"><span class="num">7</span><span class="chip m2">Mức 2</span></div>
+        <p class="feat">Skill</p>
+        <h4>Phản hồi khách hàng</h4>
+        <p class="nd">Skill phản hồi theo tình huống: khiếu nại, từ chối khéo, xin lỗi, giữ chân khách.</p>
+        <div class="sp"><b>Sản phẩm:</b> Skill + bộ mẫu phản hồi</div>
+      </div>
+      <div class="card">
+        <div class="top"><span class="num">8</span><span class="chip m2">Mức 2</span></div>
+        <p class="feat">Skill</p>
+        <h4>Viết quy trình (SOP)</h4>
+        <p class="nd">Skill chuẩn hóa việc lặp lại thành SOP từng bước: vai trò, đầu vào/đầu ra, điểm kiểm tra.</p>
+        <div class="sp"><b>Sản phẩm:</b> Skill + 1 SOP</div>
+      </div>
+      <div class="card">
+        <div class="top"><span class="num">9</span><span class="chip m2">Mức 2</span></div>
+        <p class="feat">Skill</p>
+        <h4>Thông báo nội bộ</h4>
+        <p class="nd">Skill soạn thông báo rõ ràng, đúng mục tiêu, đúng đối tượng.</p>
+        <div class="sp"><b>Sản phẩm:</b> Skill + 1 thông báo</div>
+      </div>
+      <div class="card">
+        <div class="top"><span class="num">10</span><span class="chip m2">Mức 2</span></div>
+        <p class="feat">Skill</p>
+        <h4>Kho hỏi đáp (FAQ)</h4>
+        <p class="nd">Skill biến tài liệu thành bộ hỏi - đáp. Ôn: quản lý bộ Skill. Cầu nối: "giờ ghép trợ lý thành một đội".</p>
+        <div class="sp"><b>Sản phẩm:</b> Skill + 1 kho FAQ . Mốc: có bộ Skill</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TUAN 3 -->
+  <section class="week t3">
+    <div class="week-head">
+      <div><div class="wt">TUẦN 3 - Xây từng subagent (5 vai của một đội)</div><div class="wsub">Dựng đội agent làm báo cáo/vận hành tự động (kiểu demo-agent-team) - tuần này xây từng thành viên</div></div>
+      <span class="badge">MỨC 3a - SUBAGENT</span>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="top"><span class="num">11</span><span class="chip m3">Mức 3a</span></div>
+        <p class="feat">Vai: cửa vào</p>
+        <h4>Subagent Thu thập thông tin</h4>
+        <p class="nd">Học khái niệm subagent (mỗi con 1 vai, 1 context riêng). Vai chuẩn hóa thông tin từ biểu mẫu/ghi chú.</p>
+        <div class="sp"><b>Sản phẩm:</b> subagent Thu thập</div>
+      </div>
+      <div class="card">
+        <div class="top"><span class="num">12</span><span class="chip m3">Mức 3a</span></div>
+        <p class="feat">Vai: phân luồng</p>
+        <h4>Subagent Phân loại nội dung</h4>
+        <p class="nd">Vai phân loại thư/tin/tài liệu để định tuyến đúng việc, đúng người.</p>
+        <div class="sp"><b>Sản phẩm:</b> subagent Phân loại</div>
+      </div>
+      <div class="card">
+        <div class="top"><span class="num">13</span><span class="chip m3">Mức 3a</span></div>
+        <p class="feat">Vai: phân tích</p>
+        <h4>Subagent Phân tích dữ liệu</h4>
+        <p class="nd">Vai tìm điểm đáng chú ý, xu hướng, bất thường; giải thích cho người không chuyên.</p>
+        <div class="sp"><b>Sản phẩm:</b> subagent Phân tích</div>
+      </div>
+      <div class="card">
+        <div class="top"><span class="num">14</span><span class="chip m3">Mức 3a</span></div>
+        <p class="feat">Vai: làm báo cáo</p>
+        <h4>Subagent Báo cáo & biểu đồ</h4>
+        <p class="nd">Vai tạo báo cáo chỉ số + gợi ý biểu đồ + tóm tắt cho quản lý từ kết quả phân tích.</p>
+        <div class="sp"><b>Sản phẩm:</b> subagent Báo cáo</div>
+      </div>
+      <div class="card">
+        <div class="top"><span class="num">15</span><span class="chip m3">Mức 3a</span></div>
+        <p class="feat">Vai: trình bày</p>
+        <h4>Subagent Trình bày (slide)</h4>
+        <p class="nd">Vai dựng đề cương/slide từ báo cáo. Ôn: 5 vai đã có, sẵn sàng ghép đội.</p>
+        <div class="sp"><b>Sản phẩm:</b> subagent Trình bày . Mốc: đủ 5 subagent</div>
+      </div>
+    </div>
+  </section>
+
+  <!-- TUAN 4 -->
+  <section class="week t4">
+    <div class="week-head">
+      <div><div class="wt">TUẦN 4 - Ghép thành đội agent phối hợp + Workspace</div><div class="wsub">Nối các subagent thành quy trình tự động, đỉnh điểm là Workspace cá nhân</div></div>
+      <span class="badge">MỨC 3b - AGENT TEAM</span>
+    </div>
+    <div class="cards">
+      <div class="card">
+        <div class="top"><span class="num">16</span><span class="chip m3">Mức 3b</span></div>
+        <p class="feat">Vai điều phối phụ</p>
+        <h4>Subagent Theo dõi công việc</h4>
+        <p class="nd">Thêm vai theo dõi việc, hạn, cảnh báo trễ/bị chặn - làm "bảng điều khiển" của đội.</p>
+        <div class="sp"><b>Sản phẩm:</b> subagent Theo dõi</div>
+      </div>
+      <div class="card">
+        <div class="top"><span class="num">17</span><span class="chip m3">Mức 3b</span></div>
+        <p class="feat">Ghép đội lần 1</p>
+        <h4>Nối 3 vai đầu</h4>
+        <p class="nd">Học vai orchestrator (nhạc trưởng): nối Thu thập -> Phân loại -> Phân tích chạy nối tiếp tự động.</p>
+        <div class="sp"><b>Sản phẩm:</b> luồng 3 subagent chạy nối</div>
+      </div>
+      <div class="card">
+        <div class="top"><span class="num">18</span><span class="chip m3">Mức 3b</span></div>
+        <p class="feat">Ghép đội lần 2</p>
+        <h4>Nối tới báo cáo & slide</h4>
+        <p class="nd">Nối tiếp Phân tích -> Báo cáo -> Trình bày: cả chuỗi "dữ liệu thô thành báo cáo + slide".</p>
+        <div class="sp"><b>Sản phẩm:</b> đội agent chạy trọn quy trình</div>
+      </div>
+      <div class="card">
+        <div class="top"><span class="num">19</span><span class="chip m3">Mức 3b</span></div>
+        <p class="feat">Đội chạy thật</p>
+        <h4>Báo cáo tuần tự động</h4>
+        <p class="nd">Cho cả đội chạy tạo báo cáo tuần gần như tự động - kiểm chứng giá trị thật của agent team.</p>
+        <div class="sp"><b>Sản phẩm:</b> 1 báo cáo tuần do đội agent tạo</div>
+      </div>
+      <div class="card">
+        <div class="top"><span class="num">20</span><span class="chip m3">Mức 3b</span></div>
+        <p class="feat">Capstone</p>
+        <h4>Workspace cá nhân</h4>
+        <p class="nd">Đóng gói cả đội thành "AI Agent Workspace" của riêng mình: chọn đúng agent cho từng việc, nối chuỗi họp -> đầu việc -> theo dõi -> báo cáo.</p>
+        <div class="sp"><b>Sản phẩm:</b> Workspace hoàn chỉnh + kế hoạch dùng</div>
+      </div>
+    </div>
+  </section>
+
+  <h2 class="sec">Khung 45 phút - mỗi buổi chia nội dung như nhau</h2>
+  <p class="lead">Mọi buổi dùng chung một khung hands-on (như buổi 1): giảng viên và học viên làm song song từng bước. Riêng 4 buổi "đổi mức/công cụ" (Buổi 1 vào Project, Buổi 6 cài Claude Code, Buổi 11 vào subagent, Buổi 17 ghép đội) dành thêm thời gian cho phần công cụ mới và rút gọn phần thực hành.</p>
+  <div class="timeline">
+    <div class="step"><div class="tm">0 - 8'</div><div class="nm">Giới thiệu + điểm đau</div><p>Câu chuyện thực tế, nêu vấn đề văn phòng cần giải.</p></div>
+    <div class="step"><div class="tm">8 - 15'</div><div class="nm">Nạp / dựng agent</div><p>Cả lớp cùng dựng agent của buổi theo mức tương ứng.</p></div>
+    <div class="step"><div class="tm">15 - 23'</div><div class="nm">Cùng chạy thử</div><p>Một tình huống chung để thấy agent chạy ra kết quả.</p></div>
+    <div class="step"><div class="tm">23 - 35'</div><div class="nm">Thực hành việc thật</div><p>Mỗi người áp dụng vào công việc thật của mình.</p></div>
+    <div class="step"><div class="tm">35 - 41'</div><div class="nm">Tinh chỉnh + kiểm tra</div><p>Chỉnh đầu ra, rà bảng kiểm, lỗi thường gặp.</p></div>
+    <div class="step"><div class="tm">41 - 45'</div><div class="nm">Lưu agent + bài tập</div><p>Lưu lại để mai dùng; giao bài thực hành nhỏ.</p></div>
+  </div>
+
+  <div class="note">
+    <h3>Lưu ý cân nhắc (điểm cần anh chốt)</h3>
+    <p>Với cấu trúc mới, <b>Claude Code vào sớm từ Tuần 2</b> (Skill), và Tuần 3-4 dựng subagent/agent team đều cần Claude Code. Đây là phần "agent đúng nghĩa" nhưng cũng là rào cản kỹ thuật với dân văn phòng thuần. Vài điểm cần quyết:</p>
+    <ul>
+      <li><b>Buổi 6 phải chắc tay onboarding Claude Code</b> (cài Node, đăng nhập, copy skill) - nên có video/tài liệu cài đặt gửi trước, và trợ giảng hỗ trợ 1-1.</li>
+      <li><b>Giữ "lối thoát" Project</b> ở Tuần 2 cho ai chưa cài kịp: cùng nội dung nhưng làm trên Project thay vì Skill.</li>
+      <li><b>Tuần 3-4 (subagent/team) khó nhất</b> - cân nhắc: (a) cả lớp cùng làm, hoặc (b) chia nhánh cơ bản (xem demo) / nâng cao (tự dựng), hoặc (c) làm theo nhóm để đỡ áp lực cá nhân.</li>
+    </ul>
+    <p style="margin-top:8px">5 buổi Project (Tuần 1) vẫn là phần ai cũng theo được - nền tảng an toàn trước khi lên kỹ thuật.</p>
+  </div>
+
+  <footer>
+    Bản đề xuất v2 - Khóa "30 Ngày Làm Chủ AI Agent Tự Động Hóa Công Việc Văn Phòng" . CES Global<br>
+    cesglobal.com.vn . Nội dung có thể điều chỉnh theo trình độ thực tế của lớp.
+  </footer>
+
+</div>
+</body>
+</html>
