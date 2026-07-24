@@ -24,7 +24,7 @@ Tài liệu này giúp mọi giảng viên dạy khóa một cách nhất quán:
 | 35 - 41 | Tinh chỉnh + kiểm tra + lỗi thường gặp |
 | 41 - 45 | Lưu agent + giao bài về nhà |
 
-**Buổi "đổi mức/công cụ" dành thêm thời gian cho phần công cụ mới, rút gọn phần thực hành:** Buổi 1 (vào Project), Buổi 6 (cài Claude Code), Buổi 11 (vào subagent), Buổi 17 (ghép đội).
+**Buổi "đổi mức/công cụ" dành thêm thời gian cho phần công cụ mới, rút gọn phần thực hành:** Buổi 1 (vào Project), Buổi 8 (vào Claude Code), Buổi 11 (vào subagent), Buổi 17 (ghép đội).
 
 ---
 
@@ -33,7 +33,7 @@ Tài liệu này giúp mọi giảng viên dạy khóa một cách nhất quán:
 | Mức | Công cụ | Tuần / Buổi | Ghi chú |
 |---|---|---|---|
 | **Mức 1** | Trợ lý **Project** (claude.ai) | Tuần 1 . B1-5 | Không cài đặt. Tuần 1 học đủ 4 tính năng: Instructions, Context, Memory, Scheduled. |
-| **Mức 2** | Trợ lý tự bật - **Skill** (Claude Code) | Tuần 2 . B6-10 | Buổi 6 dành thời gian onboarding Claude Code. Giữ "lối thoát" Project cho ai chưa cài. |
+| **Mức 2** | **Artifact** rồi **Skill** | Tuần 2 . B6-10 | B6 (Artifact) và B7 (Skill) vẫn trên claude.ai, **không cài gì**. Claude Code chỉ cần **từ B8** - giao bài cài ở cuối B7. |
 | **Mức 3** | Đội trợ lý - **Agent team** | Tuần 3-4 . B11-20 | Tuần 3 xây từng subagent (mỗi con 1 vai); Tuần 4 ghép thành đội phối hợp + Workspace. |
 
 Bản đồ đầy đủ: `00-tong-quan/lo-trinh-20-buoi.html`. Bảng so sánh 3 mức: `00-tong-quan/3-muc-agent-project-skill-subagent.md`.
@@ -54,10 +54,10 @@ Bản đồ đầy đủ: `00-tong-quan/lo-trinh-20-buoi.html`. Bảng so sánh 
 ## 5. Chuẩn bị trước mỗi buổi (checklist chung)
 
 - [ ] Đọc kỹ file kịch bản buổi trong `giao-an/tuan-X/`.
-- [ ] Tài khoản Claude đăng nhập sẵn; kiểm tra tính năng buổi đó cần (Projects / Context / Scheduled / Claude Code).
+- [ ] Tài khoản Claude đăng nhập sẵn; kiểm tra tính năng buổi đó cần (Projects / Context / Scheduled / Artifacts / Skills / Claude Code).
 - [ ] Gửi TRƯỚC vào nhóm lớp: file agent/prompt của buổi (trong `tai-nguyen-hoc-vien/tuan-X/`) để học viên copy nhanh.
 - [ ] Slide tiêu đề + slide bài toán thực tế của buổi.
-- [ ] Từ Tuần 2: gửi trước video/tài liệu cài Claude Code, bố trí trợ giảng hỗ trợ 1-1.
+- [ ] Cuối buổi 7: giao bài cài Claude Code (gửi video/tài liệu), bố trí trợ giảng hỗ trợ 1-1 và **điểm danh ai đã cài xong trước buổi 8** - lớp có người chưa cài là buổi 8 vỡ.
 
 ---
 

@@ -32,7 +32,7 @@ bo-ai-agent-van-phong-30-ngay/
 │
 ├── giao-an/                        <- KỊCH BẢN GIẢNG (thứ giảng viên cần nhất)
 │   ├── tuan-1-project/                 Buổi 1-5  . Mức 1 - Trợ lý Project
-│   ├── tuan-2-skill/                   Buổi 6-10 . Mức 2 - Trợ lý tự bật (Skill)
+│   ├── tuan-2-skill/                   Buổi 6-10 . Mức 2 - Artifact + Skill
 │   ├── tuan-3-subagent/                Buổi 11-15 . Mức 3a - Xây từng subagent
 │   └── tuan-4-agent-team/              Buổi 16-20 . Mức 3b - Ghép đội + Workspace
 │
@@ -54,7 +54,7 @@ bo-ai-agent-van-phong-30-ngay/
 | Mức | Là gì | Tuần | Cài đặt |
 |---|---|---|---|
 | **Mức 1** | Trợ lý Project (claude.ai) | Tuần 1 (Buổi 1-5) | Không cài gì |
-| **Mức 2** | Trợ lý tự bật - Skill (Claude Code) | Tuần 2 (Buổi 6-10) | Cài Claude Code |
+| **Mức 2** | Artifact + Skill (đóng gói cách làm) | Tuần 2 (Buổi 6-10) | Buổi 6-7 không cài; **Claude Code từ buổi 8** |
 | **Mức 3** | Đội trợ lý - Agent team / Workspace | Tuần 3-4 (Buổi 11-20) | Claude Code |
 
 Cùng một tư duy "giao việc có cấu trúc" (đầu vào - đầu ra - cách kiểm tra), chỉ khác công cụ. Chi tiết: [00-tong-quan/3-muc-agent-project-skill-subagent.md](00-tong-quan/3-muc-agent-project-skill-subagent.md).
@@ -64,6 +64,7 @@ Cùng một tư duy "giao việc có cấu trúc" (đầu vào - đầu ra - cá
 ## Trạng thái soạn bài
 
 - [x] Tuần 1 (Buổi 01-05) - Mức 1 Project: viết thư, tóm tắt tài liệu, ghi chú họp, lập kế hoạch, viết báo cáo. Làm chủ 4 tính năng Project (Instructions, Context, Memory, Scheduled).
-- [ ] Buổi 06-20 - đang soạn theo khuôn.
+- [x] Buổi 06-09 - Mức 2: Artifact (buổi 06) và Skill (buổi 07 trên claude.ai; buổi 08-09 tự tay tạo `SKILL.md` trong Claude Code).
+- [ ] Buổi 10-20 - đang soạn theo khuôn.
 
 *© CES Global - Bộ tài liệu chương trình "30 Ngày Làm Chủ AI Agent".*

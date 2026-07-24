@@ -24,7 +24,7 @@ Tài liệu giải thích 3 mức "agent" mà khóa đi qua. Dùng cho giảng v
 | Làm 1 việc hay cả đội | 1 trợ lý lo 1 việc | 1 kỹ năng, tự kích hoạt | Nhiều trợ lý con phối hợp trọn quy trình |
 | Tự nhớ + tự làm nhiều bước | Nhớ trong Project; có thêm chạy định kỳ (Scheduled) | Theo kỹ năng đã cài | Mạnh nhất: mỗi con có bộ nhớ riêng, tự dùng công cụ, bàn giao con kế |
 | Độ khó cho dân văn phòng | Rất dễ | Trung bình | Cao hơn |
-| Ví dụ trong khóa | Buổi 1-5 (trợ lý email, tóm tắt...) | Buổi 6-10 (Skill làm sạch dữ liệu, SOP...) | Buổi 11-20 (đội thu thập -> phân tích -> báo cáo -> slide) |
+| Ví dụ trong khóa | Buổi 1-5 (trợ lý email, tóm tắt...) | Buổi 6-10 (Artifact ứng dụng nhỏ; Skill đóng gói tài liệu, Skill tóm tắt tài liệu) | Buổi 11-20 (đội thu thập -> phân tích -> báo cáo -> slide) |
 
 Còn 1 mức thứ 4 - **Managed Agents / Agent SDK** (qua API, cho lập trình viên) - ngoài phạm vi khóa văn phòng này.
 
