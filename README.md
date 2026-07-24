@@ -63,8 +63,7 @@ Cùng một tư duy "giao việc có cấu trúc" (đầu vào - đầu ra - cá
 
 ## Trạng thái soạn bài
 
-- [x] Buổi 01 - Viết thư điện tử (Instructions) - kịch bản + file agent.
-- [x] Buổi 02 - Tóm tắt tài liệu (Context) - kịch bản + file agent.
-- [ ] Buổi 03-20 - đang soạn theo khuôn.
+- [x] Tuần 1 (Buổi 01-05) - Mức 1 Project: viết thư, tóm tắt tài liệu, ghi chú họp, lập kế hoạch, viết báo cáo. Làm chủ 4 tính năng Project (Instructions, Context, Memory, Scheduled).
+- [ ] Buổi 06-20 - đang soạn theo khuôn.
 
 *© CES Global - Bộ tài liệu chương trình "30 Ngày Làm Chủ AI Agent".*
