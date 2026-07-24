@@ -64,7 +64,7 @@ Cùng một tư duy "giao việc có cấu trúc" (đầu vào - đầu ra - cá
 ## Trạng thái soạn bài
 
 - [x] Tuần 1 (Buổi 01-05) - Mức 1 Project: viết thư, tóm tắt tài liệu, ghi chú họp, lập kế hoạch, viết báo cáo. Làm chủ 4 tính năng Project (Instructions, Context, Memory, Scheduled).
-- [x] Buổi 06-09 - Mức 2: Artifact (buổi 06) và Skill (buổi 07 trên claude.ai; buổi 08-09 tự tay tạo `SKILL.md` trong Claude Code).
-- [ ] Buổi 10-20 - đang soạn theo khuôn.
+- [x] Tuần 2 (Buổi 06-10) - Mức 2: Artifact (B06) và Skill - đóng gói tài liệu (B07), tóm tắt tài liệu (B08-09), tạo slide (B10). Biết **ba cách để có một skill**: nhờ Claude đóng gói / tự sinh từ các lượt hỏi / cài skill viết sẵn.
+- [ ] Buổi 11-20 - đang soạn theo khuôn.
 
 *© CES Global - Bộ tài liệu chương trình "30 Ngày Làm Chủ AI Agent".*
